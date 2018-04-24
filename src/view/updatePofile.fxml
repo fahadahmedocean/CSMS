@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateProfileController">
+   <children>
+      <Pane fx:id="updatePane" prefHeight="400.0" prefWidth="800.0">
+         <children>
+            <Label contentDisplay="CENTER" layoutX="345.0" layoutY="14.0" prefHeight="41.0" prefWidth="136.0" text="Update Profile" textAlignment="CENTER" textFill="#990048">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button layoutX="189.0" layoutY="195.0" mnemonicParsing="false" onAction="#updateAddressOnAction" prefHeight="73.0" prefWidth="169.0" text="Update Address " />
+            <Button layoutX="189.0" layoutY="293.0" mnemonicParsing="false" onAction="#updateSSNOnAction" prefHeight="73.0" prefWidth="169.0" text="Update SSN" />
+            <Button layoutX="456.0" layoutY="195.0" mnemonicParsing="false" onAction="#updateContactNoOnAction" prefHeight="73.0" prefWidth="169.0" text="Update Contact No." />
+            <Button layoutX="456.0" layoutY="293.0" mnemonicParsing="false" onAction="#updateEmailOnAction" prefHeight="73.0" prefWidth="169.0" text="Update Email ID" />
+            <Button layoutX="192.0" layoutY="98.0" mnemonicParsing="false" onAction="#updateLoginIdOnAction" prefHeight="73.0" prefWidth="169.0" text="Update LogIn ID" />
+            <Button layoutX="456.0" layoutY="98.0" mnemonicParsing="false" onAction="#updatePasswordOnAction" prefHeight="73.0" prefWidth="169.0" text="Update Password" />
+         </children>
+      </Pane>
+      <Pane fx:id="individualUpdatePane" prefHeight="400.0" prefWidth="800.0">
+         <children>
+            <Button layoutX="361.0" layoutY="298.0" mnemonicParsing="false" onAction="#submitUpdateOnAction" prefHeight="31.0" prefWidth="108.0" text="Update" />
+            <Label fx:id="currentValue" layoutX="224.0" layoutY="67.0" prefHeight="51.0" prefWidth="375.0" />
+            <Label fx:id="updateMsgLabel" layoutX="280.0" layoutY="135.0" prefHeight="21.0" prefWidth="256.0" textFill="#393131" />
+            <TextField fx:id="valueTextField" layoutX="298.0" layoutY="173.0" prefHeight="73.0" prefWidth="226.0" />
+            <Button layoutX="379.0" layoutY="343.0" mnemonicParsing="false" onAction="#backOnAction" prefHeight="31.0" prefWidth="73.0" text="Back" />
+            <Label fx:id="errorLabel" layoutX="298.0" layoutY="262.0" prefHeight="21.0" prefWidth="355.0" textAlignment="CENTER" textFill="#ee0707" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
