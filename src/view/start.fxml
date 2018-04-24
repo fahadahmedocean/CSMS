@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-image: url('http://2.bp.blogspot.com/-UcisX_ClF-Y/U9JW7mzgSJI/AAAAAAAAktE/xCo4fFdGeTA/s1600/Coffee%20Cup%20Coloring%20Drawing%20Free%20wallpaper1.gif');" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+  <children>
+    <VBox layoutY="0.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <children>
+        <GridPane alignment="CENTER">
+          <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="8.0" prefHeight="30.0" prefWidth="678.0" text="Welcome to Coffee Shop Management System" textAlignment="CENTER" textFill="#4e1b96" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+              <font>
+                <Font name="Bodoni MT Black" size="24.0" fx:id="x1" />
+              </font>
+              <GridPane.margin>
+                <Insets />
+              </GridPane.margin>
+            </Label>
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+        <GridPane id="LoginGridPane1" fx:id="loginGridPane1" alignment="CENTER" prefHeight="85.0" prefWidth="800.0">
+          <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" font="$x1" prefHeight="30.0" prefWidth="507.0" text="logIn as" textAlignment="CENTER" textFill="$x2" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+              <GridPane.margin>
+                <Insets />
+              </GridPane.margin>
+            </Label>
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+        <GridPane id="b" fx:id="buttonsGridPane2" alignment="CENTER" prefHeight="453.0" prefWidth="675.0">
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+               <children>
+                  <Pane prefHeight="453.0" prefWidth="655.0">
+                     <children>
+                        <Button fx:id="customerLoginButton" layoutX="9.0" layoutY="144.0" mnemonicParsing="false" onAction="#customerLoginOnAction" prefHeight="45.0" prefWidth="124.0" style="-fx-background-color: #cce6ff;" text="Customer" />
+                        <Button fx:id="employeeLoginButton" layoutX="287.0" layoutY="144.0" mnemonicParsing="false" onAction="#managerLoginOnAction" prefHeight="45.0" prefWidth="124.0" style="-fx-background-color: #cce6ff;" text="Manager" />
+                        <Button fx:id="adminLoginButton" layoutX="151.0" layoutY="144.0" mnemonicParsing="false" onAction="#adminLoginOnAction" prefHeight="45.0" prefWidth="124.0" style="-fx-background-color: #cce6ff;" text="Admin" />
+                        <Button layoutX="219.0" layoutY="263.0" mnemonicParsing="false" onAction="#chefOnAction" prefHeight="45.0" prefWidth="124.0" style="-fx-background-color: #cce6ff;" text="Chef" />
+                        <Button layoutX="79.0" layoutY="263.0" mnemonicParsing="false" onAction="#deliveryPersonOnAction" prefHeight="45.0" prefWidth="124.0" style="-fx-background-color: #cce6ff;" text="Delivery Person" />
+                        <Label layoutX="177.0" layoutY="45.0" prefHeight="21.0" prefWidth="265.0" text="LogIn As" textFill="#151193">
+                           <font>
+                              <Font size="22.0" />
+                           </font></Label>
+                     </children>
+                     <GridPane.margin>
+                        <Insets right="80.0" />
+                     </GridPane.margin>
+                  </Pane>
+               </children>
+        </GridPane>
+        <GridPane id="fot" fx:id="footerGridPane" alignment="CENTER">
+          <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" font="$x1" prefHeight="30.0" prefWidth="507.0" text="Designed and Developed by Clitus Dmonte for ITMD510" textAlignment="CENTER" textFill="$x2" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+              <GridPane.margin>
+                <Insets />
+              </GridPane.margin>
+            </Label>
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+      </children>
+    </VBox>
+      <Pane fx:id="custRegPane" layoutX="213.0" prefHeight="600.0" prefWidth="481.0">
+         <children>
+            <Label layoutX="22.0" layoutY="99.0" prefHeight="21.0" prefWidth="84.0" text="First Name:" />
+            <Label layoutX="22.0" layoutY="138.0" prefHeight="21.0" prefWidth="84.0" text="Last Name:" />
+            <Label layoutX="22.0" layoutY="262.0" prefHeight="21.0" prefWidth="84.0" text="Contact No:" />
+            <Label layoutX="22.0" layoutY="304.0" prefHeight="21.0" prefWidth="84.0" text="SSN:" />
+            <Label layoutX="22.0" layoutY="342.0" prefHeight="21.0" prefWidth="84.0" text="Email:" />
+            <Label layoutX="22.0" layoutY="388.0" prefHeight="21.0" prefWidth="84.0" text="Address:" />
+            <Label layoutX="22.0" layoutY="177.0" prefHeight="21.0" prefWidth="84.0" text="User Name:" />
+            <Label layoutX="22.0" layoutY="220.0" prefHeight="21.0" prefWidth="84.0" text="Password:" />
+            <TextField fx:id="firstNamett" layoutX="159.0" layoutY="94.0" />
+            <TextField fx:id="lastnamett" layoutX="159.0" layoutY="133.0" />
+            <TextField fx:id="userName" layoutX="159.0" layoutY="172.0" />
+            <TextField fx:id="password" layoutX="159.0" layoutY="215.0" />
+            <TextField fx:id="contactNo" layoutX="159.0" layoutY="257.0" />
+            <TextField fx:id="ssn" layoutX="159.0" layoutY="299.0" />
+            <TextField fx:id="email" layoutX="159.0" layoutY="337.0" />
+            <TextField fx:id="address" layoutX="159.0" layoutY="383.0" />
+            <Button layoutX="110.0" layoutY="479.0" mnemonicParsing="false" onAction="#custDataSubmitOnAction" prefHeight="31.0" prefWidth="132.0" style="-fx-background-color: #cce6ff;" text="Submit" />
+            <Label fx:id="custErr" layoutX="50.0" layoutY="445.0" prefHeight="21.0" prefWidth="259.0" textFill="#ee0707" />
+            <Button layoutX="110.0" layoutY="524.0" mnemonicParsing="false" onAction="#custBackOnAction" prefHeight="31.0" prefWidth="132.0" style="-fx-background-color: #cce6ff;" text="Back" />
+         </children>
+      </Pane>
+    <GridPane id="login" fx:id="loginDetailsGridPane" layoutX="0.0" layoutY="74.0" prefHeight="469.0" prefWidth="800.0">
+      <children>
+        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+          <children>
+            <Pane prefHeight="469.0" prefWidth="800.0">
+              <children>
+                        <Label layoutX="173.0" layoutY="138.0" prefHeight="45.0" prefWidth="96.0" text="LogIn Id" />
+                <Label fx:id="loginViewLabel" layoutX="306.0" layoutY="33.0" prefHeight="45.0" prefWidth="231.0" textFill="#151193">
+                           <font>
+                              <Font size="22.0" />
+                           </font></Label>
+                <Label layoutX="163.0" layoutY="203.0" prefWidth="82.0" text="Password" />
+                <TextField fx:id="loginIdTextField" layoutX="346.0" layoutY="131.0" prefHeight="31.0" prefWidth="211.0" />
+                        <PasswordField fx:id="passwordIdTextField" layoutX="349.0" layoutY="193.0" prefHeight="31.0" prefWidth="211.0" />
+                <Button layoutX="346.0" layoutY="277.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="31.0" prefWidth="96.0" style="-fx-background-color: #cce6ff;" text="Login" />
+                        <Button layoutX="458.0" layoutY="277.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="31.0" prefWidth="96.0" style="-fx-background-color: #cce6ff;" text="Back" />
+                        <Label fx:id="errorMsg" layoutX="286.0" layoutY="229.0" prefHeight="39.0" prefWidth="367.0" textFill="#ee0707" />
+                        <Button fx:id="signUpButton" layoutX="346.0" layoutY="330.0" mnemonicParsing="false" onAction="#signUpButtonOnAction" prefHeight="31.0" prefWidth="211.0" style="-fx-background-color: #cce6ff;" text="Sign Up Here." />
+              </children>
+            </Pane>
+          </children>
+        </VBox>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </children>
+</AnchorPane>

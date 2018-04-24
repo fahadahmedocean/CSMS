@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerViewController">
+   <children>
+      <VBox prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <HBox prefHeight="31.0" prefWidth="993.0">
+               <children>
+                  <Label fx:id="wellomeLabel" prefHeight="38.0" prefWidth="817.0" />
+                  <Button fx:id="editProfileButton" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#editProfileButtonOnAction" text="Edit Profile" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="logoutButton" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#logoutButtonOnAction" text="Logout" textAlignment="CENTER" />
+               </children>
+            </HBox>
+            <GridPane prefHeight="569.0" prefWidth="1000.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="820.0" minWidth="10.0" prefWidth="748.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="495.0" minWidth="10.0" prefWidth="252.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="476.0" minHeight="10.0" prefHeight="434.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="135.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Pane prefHeight="434.0" prefWidth="748.0">
+                           <children>
+                              <TableView fx:id="tableView" editable="true" prefHeight="434.0" prefWidth="748.0" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <TextField fx:id="itemIdTextFeild" layoutX="108.0" layoutY="48.0" prefHeight="31.0" prefWidth="112.0" />
+                        <Button fx:id="addToCartButton" layoutX="108.0" layoutY="100.0" mnemonicParsing="false" onAction="#addToCartButtonOnAction" prefHeight="31.0" prefWidth="112.0" text="Add to Cart" />
+                        <Label layoutX="7.0" layoutY="53.0" prefHeight="21.0" prefWidth="79.0" text="Item ID :" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                     <children>
+                        <Label fx:id="orderCartLabel" layoutX="57.0" layoutY="39.0" prefHeight="59.0" prefWidth="663.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Button fx:id="checkTotalButton" layoutX="12.0" layoutY="74.0" mnemonicParsing="false" onAction="#checkTotalOnAction" prefHeight="31.0" prefWidth="112.0" text="Check Total" />
+                        <Button fx:id="placeOrderButton" layoutX="135.0" layoutY="74.0" mnemonicParsing="false" onAction="#placeOrderOnAction" prefHeight="31.0" prefWidth="103.0" text="Place Order" />
+                        <Label fx:id="totalLabel" layoutX="56.0" layoutY="19.0" prefHeight="37.0" prefWidth="146.0" />
+                     </children>
+                  </AnchorPane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.LoginController">
+  <children>
+    <VBox layoutY="0.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <children>
+        <GridPane alignment="CENTER">
+          <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="507.0" text="Welcome to Online Coffee Shop Management System" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+              <font>
+                <Font size="20.0" fx:id="x1" />
+              </font>
+              <textFill>
+                <Color blue="0.286" green="0.000" red="0.600" fx:id="x2" />
+              </textFill>
+              <GridPane.margin>
+                <Insets />
+              </GridPane.margin>
+            </Label>
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+        <GridPane id="LoginGridPane1" fx:id="loginGridPane1" alignment="CENTER" prefHeight="85.0" prefWidth="800.0">
+          <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" font="$x1" prefHeight="30.0" prefWidth="507.0" text="logIn as" textAlignment="CENTER" textFill="$x2" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+              <GridPane.margin>
+                <Insets />
+              </GridPane.margin>
+            </Label>
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+        <GridPane id="b" fx:id="buttonsGridPane2" alignment="CENTER" prefHeight="453.0" prefWidth="800.0">
+          <children>
+            <HBox prefHeight="399.0" prefWidth="800.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+              <children>
+                <Button fx:id="customerLoginButton" mnemonicParsing="false" onAction="#customerLoginOnAction" prefHeight="45.0" prefWidth="120.0" text="Customer" HBox.hgrow="ALWAYS">
+                  <HBox.margin>
+                    <Insets left="210.0" right="20.0" />
+                  </HBox.margin>
+                </Button>
+                <Button fx:id="employeeLoginButton" mnemonicParsing="false" onAction="#employeeLoginOnAction" prefHeight="45.0" prefWidth="120.0" text="Employee">
+                  <HBox.margin>
+                    <Insets right="20.0" />
+                  </HBox.margin>
+                </Button>
+                <Button fx:id="adminLoginButton" mnemonicParsing="false" onAction="#adminLoginOnAction" prefHeight="45.0" prefWidth="120.0" text="Admin" />
+              </children>
+              <padding>
+                <Insets top="150.0" />
+              </padding>
+            </HBox>
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+        <GridPane id="fot" fx:id="footerGridPane" alignment="CENTER">
+          <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" font="$x1" prefHeight="30.0" prefWidth="507.0" text="Designed and Developed by Clitus Dmonte for ITMD510" textAlignment="CENTER" textFill="$x2" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+              <GridPane.margin>
+                <Insets />
+              </GridPane.margin>
+            </Label>
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+      </children>
+    </VBox>
+    <GridPane id="login" fx:id="loginDetailsGridPane" layoutX="0.0" layoutY="74.0" prefHeight="469.0" prefWidth="800.0">
+      <children>
+        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+          <children>
+            <Pane prefHeight="469.0" prefWidth="800.0">
+              <children>
+                <Label layoutX="163.0" layoutY="128.0" prefHeight="45.0" prefWidth="96.0" text="LogIn Id" />
+                <Label layoutX="163.0" layoutY="203.0" prefWidth="82.0" text="Password" />
+                <TextField layoutX="346.0" layoutY="131.0" prefWidth="200.0" />
+                <TextField layoutX="346.0" layoutY="193.0" prefWidth="200.0" />
+                <Button layoutX="346.0" layoutY="277.0" mnemonicParsing="false" prefWidth="120.0" text="login" />
+              </children>
+            </Pane>
+          </children>
+        </VBox>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </children>
+</AnchorPane>

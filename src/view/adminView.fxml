@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminViewController">
+   <children>
+      <Button contentDisplay="RIGHT" layoutX="913.0" layoutY="3.0" mnemonicParsing="false" onAction="#logoutButtonOnAction" prefHeight="35.0" prefWidth="83.0" text="Logout" textAlignment="CENTER" />
+      <Pane fx:id="adminViewPane" layoutX="4.0" layoutY="48.0" prefHeight="549.0" prefWidth="992.0">
+         <children>
+            <Button layoutX="281.0" layoutY="214.0" mnemonicParsing="false" onAction="#addDeleteEmpOnAction" prefHeight="82.0" prefWidth="207.0" text="Add and Delete Employees" />
+            <Button layoutX="544.0" layoutY="214.0" mnemonicParsing="false" onAction="#updateInformation" prefHeight="82.0" prefWidth="213.0" text="Update Personal Information" />
+         </children>
+      </Pane>
+      <Pane fx:id="adminOperationsPane" layoutY="35.0" prefHeight="562.0" prefWidth="1000.0">
+         <children>
+            <TableView fx:id="empoyeeLogsTableView" layoutX="16.0" layoutY="50.0" prefHeight="515.0" prefWidth="554.0" />
+            <Button layoutX="910.0" layoutY="8.0" mnemonicParsing="false" onAction="#backOnAction" prefHeight="35.0" prefWidth="83.0" text="Back" />
+            <Label prefHeight="51.0" prefWidth="137.0" text="Employee Details:">
+               <padding>
+                  <Insets left="15.0" top="30.0" />
+               </padding>
+            </Label>
+            <TabPane layoutX="570.0" layoutY="48.0" prefHeight="515.0" prefWidth="424.0" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab text="Delete Employee">
+                     <content>
+                        <Pane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="44.0" layoutY="65.0" prefHeight="21.0" prefWidth="99.0" text="Enter Emp Id:" />
+                              <TextField fx:id="deleteEmpTextFeild" layoutX="167.0" layoutY="60.0" />
+                              <Button layoutX="167.0" layoutY="140.0" mnemonicParsing="false" onAction="#deleteEmpOnAction" prefHeight="31.0" prefWidth="186.0" text="Delete Employee" />
+                              <Label fx:id="errorLabel" layoutX="167.0" layoutY="107.0" prefHeight="21.0" prefWidth="186.0" textFill="#ee0707" />
+                           </children>
+                        </Pane>
+                     </content>
+                  </Tab>
+                  <Tab text="Add Employee">
+                     <content>
+                        <Pane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="40.0" layoutY="26.0" text="Emp ID" />
+                              <Label layoutX="41.0" layoutY="96.0" text="First Name" />
+                              <Label layoutX="42.0" layoutY="137.0" text="Last Name" />
+                              <Label fx:id="errorAddEmployee" layoutX="69.0" layoutY="391.0" prefHeight="21.0" prefWidth="327.0" textFill="#ee0707" />
+                              <Button layoutX="137.0" layoutY="433.0" mnemonicParsing="false" onAction="#addEmployeeOnAction" prefHeight="14.0" prefWidth="177.0" text="Add Employee" />
+                              <TextField fx:id="addEmpID" layoutX="167.0" layoutY="14.0" />
+                              <TextField fx:id="addFirstName" layoutX="167.0" layoutY="91.0" />
+                              <TextField fx:id="addLastName" layoutX="167.0" layoutY="132.0" />
+                              <TextField fx:id="addEmailID" layoutX="169.0" layoutY="314.0" />
+                              <TextField fx:id="addSSN" layoutX="167.0" layoutY="272.0" />
+                              <TextField fx:id="addContactNo" layoutX="167.0" layoutY="177.0" />
+                              <Label layoutX="43.0" layoutY="319.0" text="Email ID" />
+                              <Label layoutX="37.0" layoutY="277.0" text="  SSN" />
+                              <Label layoutX="37.0" layoutY="182.0" text=" Contact No." />
+                              <Label layoutX="44.0" layoutY="357.0" text="Address" />
+                              <TextField fx:id="addAddress" layoutX="169.0" layoutY="352.0" />
+                              <TextField fx:id="addUserID" layoutX="167.0" layoutY="52.0" />
+                              <Label layoutX="39.0" layoutY="57.0" text="User ID" />
+                              <TextField fx:id="addRole" layoutX="167.0" layoutY="225.0" />
+                              <Label layoutX="43.0" layoutY="230.0" text="Role" />
+                              <Label fx:id="errorAddEmployee1" layoutX="77.0" layoutY="412.0" prefHeight="21.0" prefWidth="327.0" textFill="#ee0707" />
+                           </children>
+                        </Pane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

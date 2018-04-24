@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeController">
+   <children>
+      <Pane fx:id="employeeViewPane" layoutX="6.0" layoutY="51.0" prefHeight="549.0" prefWidth="992.0">
+         <children>
+            <Button layoutX="281.0" layoutY="214.0" mnemonicParsing="false" onAction="#viewOrderLogsOnAction" prefHeight="82.0" prefWidth="168.0" text="View Orders" />
+            <Button layoutX="544.0" layoutY="214.0" mnemonicParsing="false" onAction="#updateInformation" prefHeight="82.0" prefWidth="168.0" text="Update Personal Info." />
+         </children>
+      </Pane>
+      <Button contentDisplay="RIGHT" layoutX="915.0" layoutY="6.0" mnemonicParsing="false" onAction="#logoutButtonOnAction" prefHeight="35.0" prefWidth="83.0" text="Logout" textAlignment="CENTER" />
+      <Pane fx:id="EmployeeOperationsPane" layoutX="2.0" layoutY="61.0" prefHeight="539.0" prefWidth="1000.0">
+         <children>
+            <TableView fx:id="orderLogsTableView" layoutX="16.0" layoutY="80.0" prefHeight="453.0" prefWidth="968.0" />
+            <Button layoutX="910.0" layoutY="8.0" mnemonicParsing="false" onAction="#backOnAction" prefHeight="35.0" prefWidth="83.0" text="Back" />
+            <Label prefHeight="21.0" prefWidth="99.0" text="Orders Log:">
+               <padding>
+                  <Insets left="15.0" top="30.0" />
+               </padding>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

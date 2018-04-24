@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerViewController">
+   <children>
+      <Pane fx:id="customerViewPane" prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <VBox prefHeight="600.0" prefWidth="1000.0">
+               <children>
+                  <HBox prefHeight="31.0" prefWidth="993.0">
+                     <children>
+                        <Label fx:id="wellomeLabel" prefHeight="31.0" prefWidth="699.0" />
+                        <Button fx:id="editProfileButton" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#editProfileButtonOnAction" text="Edit Profile" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="deleteProfileButton" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#deleteProfileButtonOnAction" text="Delete Profile" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="logoutButton" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#logoutButtonOnAction" text="Logout" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin></Button>
+                     </children>
+                  </HBox>
+                  <SplitPane dividerPositions="0.7685370741482966" prefHeight="406.0" prefWidth="1000.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="384.0" prefWidth="755.0">
+                           <children>
+                              <TableView fx:id="tableView" layoutX="2.0" prefHeight="404.0" prefWidth="763.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="384.0" prefWidth="218.0">
+                           <children>
+                              <TextField fx:id="itemIdTextFeild" layoutX="114.0" layoutY="48.0" prefHeight="31.0" prefWidth="98.0" />
+                              <Label fx:id="errorLabel" layoutX="31.0" layoutY="87.0" prefHeight="21.0" prefWidth="181.0" />
+                              <Button fx:id="addToCartButton" layoutX="114.0" layoutY="119.0" mnemonicParsing="false" onAction="#addToCartButtonOnAction" prefHeight="31.0" prefWidth="98.0" text="Add to Cart" />
+                              <Label layoutX="14.0" layoutY="53.0" prefHeight="21.0" prefWidth="105.0" text="Menu Item ID :" />
+                              <Button layoutX="41.0" layoutY="338.0" mnemonicParsing="false" onAction="#clearCartButtonOnAction" prefHeight="31.0" prefWidth="152.0" text="Clear Cart" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+                  <SplitPane dividerPositions="0.7685370741482966" prefHeight="160.0" prefWidth="200.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="orderCartLabel" layoutY="24.0" prefHeight="134.0" prefWidth="763.0" textAlignment="CENTER" />
+                              <Label fx:id="cartLabel" prefHeight="21.0" prefWidth="175.0" text="          Cart:" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="totalLabel" layoutX="58.0" layoutY="14.0" prefHeight="39.0" prefWidth="112.0" />
+                              <Button fx:id="checkTotalButton" layoutX="14.0" layoutY="110.0" mnemonicParsing="false" onAction="#checkTotalOnAction" prefHeight="31.0" prefWidth="98.0" text="Check Total" />
+                              <Button fx:id="placeOrderButton" layoutX="118.0" layoutY="110.0" mnemonicParsing="false" onAction="#placeOrderOnAction" prefHeight="31.0" prefWidth="105.0" text="Place Order" />
+                              <Label fx:id="checkTotalError" layoutX="28.0" layoutY="69.0" prefHeight="21.0" prefWidth="181.0" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <Pane fx:id="orderViewPane" prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <Label layoutX="276.0" layoutY="81.0" prefHeight="21.0" prefWidth="44.0" text="Cart:" />
+            <Label layoutX="276.0" layoutY="175.0" prefHeight="21.0" prefWidth="44.0" text="Total:" />
+            <Label fx:id="cartItemsLabel" layoutX="354.0" layoutY="68.0" prefHeight="47.0" prefWidth="602.0" />
+            <Label fx:id="totalItemsFinalLabel" layoutX="360.0" layoutY="162.0" prefHeight="47.0" prefWidth="143.0" />
+            <Label layoutX="276.0" layoutY="354.0" prefHeight="21.0" prefWidth="92.0" text="Name:" />
+            <Label layoutX="276.0" layoutY="396.0" prefHeight="21.0" prefWidth="92.0" text="Address:" />
+            <Label fx:id="nameLabel" layoutX="368.0" layoutY="354.0" prefHeight="21.0" prefWidth="196.0" />
+            <Label fx:id="addressLabel" layoutX="368.0" layoutY="396.0" prefHeight="21.0" prefWidth="196.0" />
+            <Button layoutX="522.0" layoutY="529.0" mnemonicParsing="false" onAction="#cancelOrderOnAction" prefHeight="39.0" prefWidth="126.0" text="Cancel Order" />
+            <Button layoutX="368.0" layoutY="529.0" mnemonicParsing="false" onAction="#confirmOrderOnAction" prefHeight="39.0" prefWidth="126.0" text="Confirm Order" />
+         </children>
+      </Pane>
+      <Pane fx:id="confrimationPane" prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <Label layoutX="410.0" layoutY="194.0" prefHeight="39.0" prefWidth="181.0" text="Order Placed Successfuly" />
+            <Button layoutX="417.0" layoutY="285.0" mnemonicParsing="false" onAction="#placeNewOrderOnAction" prefHeight="31.0" prefWidth="166.0" text="Place New Order" />
+            <Label fx:id="giftCard" layoutX="308.0" layoutY="242.0" prefHeight="21.0" prefWidth="404.0" text="You have received giftcard as your order exceeds above $50. " />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
